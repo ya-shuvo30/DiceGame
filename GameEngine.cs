@@ -29,8 +29,7 @@ public class GameEngine
 
         while (true)
         {
-            Console.Write("Your selection: ");
-            string input = Console.ReadLine()?.Trim().ToLower();
+            string input = (Console.ReadLine() ?? "").Trim().ToLower();
 
             if (input == "x")
             {
@@ -78,7 +77,7 @@ public class GameEngine
             Console.WriteLine("X - exit");
             Console.WriteLine("? - help");
             Console.Write("Your selection: ");
-            string input = Console.ReadLine()?.Trim().ToLower();
+            string input = (Console.ReadLine() ?? "").Trim().ToLower();
 
             if (input == "x")
             {
@@ -120,7 +119,7 @@ public class GameEngine
         while (true)
         {
             Console.Write("Your selection: ");
-            string input = Console.ReadLine()?.Trim().ToLower();
+            string input = (Console.ReadLine() ?? "").Trim().ToLower();
 
             if (input == "x")
                 Environment.Exit(0);
@@ -195,7 +194,9 @@ public class GameEngine
     public static void RenderHelpTable(List<Dice> diceList)
     {
         int n = diceList.Count;
-        var table = new ConsoleTable(" ", diceList.Select((_, i) => $"D{i}").ToArray());
+        var headers = new List<string> { " " };
+        headers.AddRange(diceList.Select((_, i) => $"D{i}"));
+        var table = new ConsoleTable(headers.ToArray());
         for (int i = 0; i < n; i++)
         {
             var row = new List<string> { $"D{i}" };
