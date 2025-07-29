@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aDTg+y6pFDk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hp\\Downloads\\DiceGame-main\\DiceGame-main\\DiceGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\consoletables\\2.7.0\\consoletables.2.7.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\wcwidth\\1.0.0\\wcwidth.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
